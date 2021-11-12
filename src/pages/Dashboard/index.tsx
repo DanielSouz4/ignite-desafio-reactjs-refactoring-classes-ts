@@ -17,19 +17,9 @@ interface f {
 
 function Dashboard() {
   const [foods, setFoods] = useState<f[]>([])
-  const [editingFood, setEditingFood] = useState<any>({})
+  const [editingFood, setEditingFood] = useState<f>({} as f)
   const [modalOpen, setModalOpen] = useState(false)
   const [editModalOpen, setEditModalOpen] = useState(false)
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     foods: [],
-  //     editingFood: {},
-  //     modalOpen: false,
-  //     editModalOpen: false,
-  //   }
-  // }
 
   useEffect(() => {
     async function setFood() {
